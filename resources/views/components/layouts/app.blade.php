@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Posts Crud</title>
+    <title>{{ $title ?? env('APP_NAME') }}</title>
 
     <!-- Styles -->
     @vite('resources/css/app.css')
@@ -13,9 +13,7 @@
 
 <body class="bg-gray-950 min-h-screen text-white grid">
     <livewire:navbar />
-    <section class="grid place-items-center">
-        <livewire:posts-table />
-    </section>
+    {{ $slot }}
 </body>
 
 </html>

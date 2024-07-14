@@ -2,11 +2,12 @@
 
 namespace App\Livewire;
 
+use App\Models\Post;
 use Livewire\Component;
 
 class PostsTable extends Component {
 
-    public array $posts;
+    public $posts;
 
     public function mount() {
         $this->posts = Post::all();
