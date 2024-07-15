@@ -11,6 +11,11 @@ class TableCell extends Component {
 
     public function delete() {
         $this->post->delete();
+        $this->refresh();
+    }
+
+    public function refresh() {
+        return to_route('Home');
     }
 
     public function render() {

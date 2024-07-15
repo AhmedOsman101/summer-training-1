@@ -16,7 +16,7 @@ class CreatePost extends Component {
     public $title;
 
     #[Validate("nullable|string")]
-    public $description;
+    public $content;
 
     #[Validate("nullable|image")]
     public $image;
@@ -26,7 +26,7 @@ class CreatePost extends Component {
         if ($this->validate()) {
             $data = [
                 "title" => $this->title,
-                "description" => $this->description,
+                "content" => $this->content,
                 "image" => $this->image?->store('posts', 'public'),
             ];
 
