@@ -7,8 +7,12 @@
                     <p class="text-sm">Create a new post</p>
                 </div>
                 <div>
-                    <button class="grid place-items-center rounded bg-blue-600 px-6 py-3 font-semibold hover:bg-blue-700"
-                        type="submit">Create</button>
+                    <button
+                        class="grid place-items-center rounded bg-blue-600 px-6 py-3 font-semibold hover:bg-blue-500 disabled:opacity-60"
+                        type="submit" wire:loading.attr="disabled">
+                        <span wire:loading.remove wire:target='create'>Create</span>
+                        <x-loader wire:loading wire:target='create' />
+                    </button>
                 </div>
             </div>
             <div class="col-span-full -mt-3 grid grid-cols-6 gap-4 lg:col-span-3">
