@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
+<html class="dark" lang="{{ str_replace("_", "-", app()->getLocale()) }}">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
 
-    <title>{{ $title ?? env('APP_NAME') }}</title>
+        <title>{{ $title ?? env("APP_NAME") }}</title>
 
-    <!-- Styles -->
-    @vite('resources/css/app.css')
-</head>
+        <!-- Styles -->
+        @vite("resources/css/app.css")
+    </head>
 
-<body class="bg-gray-950 min-h-screen text-white grid">
-    <livewire:navbar />
-    {{ $slot }}
-</body>
+    <body class="grid min-h-screen bg-gray-950 text-white">
+        <livewire:navbar />
+        {{ $slot }}
+    </body>
 
 </html>

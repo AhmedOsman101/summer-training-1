@@ -1,13 +1,13 @@
 <header class="py-2 dark:bg-gray-800 dark:text-gray-100">
-    <div class="container flex justify-between items-center h-16 mx-auto">
-        <a href="{{route('Home')}}" aria-label="Back to homepage"
-            class="hover:text-blue-400 grid place-items-center font-bold text-xl">
+    <div class="container mx-auto flex h-16 items-center justify-between">
+        <a aria-label="Back to homepage" class="grid place-items-center text-xl font-bold hover:text-blue-400"
+            href="{{ route("Home") }}">
             {{ $app_name }}
         </a>
-        <ul class="items-stretch flex space-x-3">
+        <ul class="flex items-stretch space-x-3">
             <li>
-                <a href="{{route('posts.create')}}"
-                    class="grid place-items-center px-6 py-3 font-semibold border rounded border-gray-50 hover:border-blue-400 hover:bg-blue-400">Create</a>
+                <a class="grid place-items-center rounded border border-gray-50 px-6 py-3 font-semibold hover:border-blue-400 hover:bg-blue-400"
+                    href="{{ route("posts.create") }}">Create</a>
             </li>
         </ul>
     </div>
