@@ -34,7 +34,7 @@ class CreatePost extends Component {
 
             if (!empty($post)) {
                 $this->reset();
-                return to_route('Home');
+                return to_route('posts.index');
             }
         }
     }

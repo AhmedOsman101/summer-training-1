@@ -50,7 +50,7 @@ class UpdatePost extends Component {
             $this->post->save();
 
             $this->reset();
-            return to_route('Home');
+            return to_route('posts.index');
         }
     }
     public function render() {

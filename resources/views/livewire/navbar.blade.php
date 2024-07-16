@@ -1,7 +1,7 @@
 <header class="py-2 dark:bg-gray-800 dark:text-gray-100">
     <div class="container mx-auto flex h-16 items-center justify-between">
         <a aria-label="Back to homepage" class="grid place-items-center text-xl font-bold hover:text-blue-400"
-            href="{{ route("Home") }}">
+            href="{{ route("posts.index") }}">
             {{ $app_name }}
         </a>
         <ul class="flex items-stretch space-x-3">

@@ -22,7 +22,7 @@ class TableCell extends Component {
     }
 
     public function refresh() {
-        return to_route('Home');
+        return to_route('posts.index');
     }
 
     public function render() {
