@@ -23,6 +23,10 @@ class UpdatePost extends Component {
     #[Validate("nullable")]
     public $image;
 
+    /**
+     * The `mount` function retrieves a post by its ID and assigns its title, content, and image to
+     * variables within the class on component load.
+     */
     public function mount() {
         $this->post = Post::findOrFail(request('id'));
 
@@ -31,6 +35,14 @@ class UpdatePost extends Component {
         $this->image = $this->post->image;
     }
 
+    /**
+     * The update function updates a post's title, content, and image while
+     * handling image storage and validation.
+     *
+     * @return \Illuminate\Http\RedirectResponse|null The `update()` function is
+     * returning a redirect response to the route named 'posts.index' after
+     * successfully updating the post data and saving it to the database.
+     */
     public function update() {
 
         if ($this->validate()) {
@@ -49,9 +61,9 @@ class UpdatePost extends Component {
 
             $this->post->save();
 
-            $this->reset();
             return to_route('posts.index');
         }
+        return $this->reset();
     }
     public function render() {
         return view('livewire.update-post');
