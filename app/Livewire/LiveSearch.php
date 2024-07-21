@@ -9,7 +9,7 @@ class LiveSearch extends Component {
     public string $search = '';
 
     public function handleKeyDown() {
-        $this->dispatch('search', search: $this->search);
+        $this->dispatch('search', search: $this->search ?? '');
     }
 
     public function render() {
