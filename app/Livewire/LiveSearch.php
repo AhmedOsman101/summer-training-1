@@ -9,6 +9,8 @@ class LiveSearch extends Component {
     public string $search = '';
 
     public function handleKeyDown() {
+        // dispatch the search event with the search value
+        // set the search to input value or empty string if input is null
         $this->dispatch('search', search: $this->search ?? '');
     }
 
