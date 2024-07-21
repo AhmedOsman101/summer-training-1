@@ -17,8 +17,11 @@ class PostsTable extends Component {
 
     #[On('search')]
     public function search(string $search = null) {
-        $this->query = $search;
-        $this->posts = Post::where('title', 'like', "%{$this->query}%")->get();
+        if (empty($search)) $this->posts = Post::all();
+        else {
+            $this->query = $search;
+            $this->posts = Post::where('title', 'like', "%{$this->query}%")->get();
+        }
     }
 
 
