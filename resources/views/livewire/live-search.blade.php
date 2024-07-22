@@ -4,7 +4,7 @@
     name="Search"
     placeholder="Search..."
     type="search" {{-- type is optional --}}
-    wire:keydown='handleKeyDown' {{-- listen to keydown event and pass a function to handle it --}}
+    wire:keyup='handleKeyUp' {{-- listen to keyup event and pass a function to handle it --}}
     wire:model.live='search' {{-- bind the input value to the search vairable --}}
     {{-- the .live modefier make sure that the value is updated whenever it changes --}}
     {{-- read more about it here: https://livewire.laravel.com/docs/forms#live-updating-fields --}}
